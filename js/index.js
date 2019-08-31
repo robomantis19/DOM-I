@@ -49,10 +49,11 @@ midImg.setAttribute('src', siteContent["main-content"]['middle-img-src'])
 
 let navbarLength = document.getElementsByTagName('a');
 //console.log(navbarLength.length)
-for(i = 0; i< navbarLength.length; i++){
-  let navbar = document.getElementsByTagName('a')[i];
-  //console.log(navbar)
+for(i = 1; i <= navbarLength.length; i++){
+  let navbar = document.getElementsByTagName('a')[i-1];
+ 
   navbar.textContent = siteContent["nav"][`nav-item-${i}`];
+  console.log(navbar)
 };
 
 let h1 = document.querySelector('.cta-text h1');
@@ -110,3 +111,23 @@ contactEm.innerHTML = siteContent['contact']['email'];
 let Footer = document.querySelector('footer p');
 Footer.innerHTML = siteContent['footer']['copyright'];
 console.log(Footer);
+
+//------------------task 3 below-----------------
+
+let navColor = document.getElementsByTagName('a');
+for(i=0; i< navColor.length; i++){
+  navColor[i].style.color = "green";
+  console.log(navColor[i]);
+}
+
+let myNav = document.getElementsByTagName('nav')[0];
+let NavItem1 = document.createElement('a')
+NavItem1.textContent="Ver.2.0"
+myNav.prepend(NavItem1);
+
+let NavItem2 = document.createElement('h2');
+NavItem2.textContent = 'Code!';
+NavItem2.style.color= "darkblue";
+NavItem2.style.fontSize= "1rem";
+myNav.appendChild(NavItem2);
+

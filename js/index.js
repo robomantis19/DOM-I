@@ -58,67 +58,68 @@ for(i = 1; i <= navbarLength.length; i++){
 
 let h1 = document.querySelector('.cta-text h1');
 console.log(h1);
-h1.innerHTML = siteContent["cta"]['h1'];
+h1.textContent = siteContent["cta"]['h1'];
 //console.log(h1);
 let button = document.querySelector('.cta-text button');
 button.textContent = siteContent["cta"]['button'];
 
 
 let Features = document.querySelectorAll('.top-content .text-content h4')[0];
-Features.innerHTML = siteContent["main-content"]["features-h4"]
+Features.textContent = siteContent["main-content"]["features-h4"]
 
 let FeaturesP = document.querySelectorAll('.top-content .text-content p')[0]
-FeaturesP.innerHTML = siteContent["main-content"]["features-content"]
+FeaturesP.textContent = siteContent["main-content"]["features-content"]
 
 let About = document.querySelectorAll('.top-content .text-content h4')[1];
-About.innerHTML = siteContent["main-content"]["about-h4"];
+About.textContent = siteContent["main-content"]["about-h4"];
 
 let AboutP = document.querySelectorAll('.top-content .text-content p')[1];
-AboutP.innerHTML = siteContent["main-content"]["about-content"];
+AboutP.textContent = siteContent["main-content"]["about-content"];
 
 //---------------------------
 let Services = document.querySelectorAll('.bottom-content .text-content h4')[0];
-Services.innerHTML = siteContent['main-content']['services-h4'];
+Services.textContent = siteContent['main-content']['services-h4'];
 
 let ServicesP = document.querySelectorAll('.bottom-content .text-content p')[0];
-ServicesP.innerHTML = siteContent['main-content']['services-content'];
+ServicesP.textContent = siteContent['main-content']['services-content'];
 
 let Product = document.querySelectorAll('.bottom-content .text-content h4')[1]
-Product.innerHTML = siteContent['main-content']['product-h4'];
+Product.textContent = siteContent['main-content']['product-h4'];
 
 let ProductP = document.querySelectorAll('.bottom-content .text-content p')[1];
-ProductP.innerHTML = siteContent['main-content']['product-content'];
+ProductP.textContent = siteContent['main-content']['product-content'];
 
 let Vision = document.querySelectorAll('.bottom-content .text-content h4')[2];
-Vision.innerHTML = siteContent['main-content']['vision-h4'];
+Vision.textContent = siteContent['main-content']['vision-h4'];
 
 let VisionP = document.querySelectorAll('.bottom-content .text-content p')[2];
-VisionP.innerHTML = siteContent['main-content']['vision-content'];
+VisionP.textContent = siteContent['main-content']['vision-content'];
 
 let contactH4 = document.querySelector('.contact h4');
-contactH4.innerHTML = siteContent['contact']['contact-h4'];
+contactH4.textContent = siteContent['contact']['contact-h4'];
 
 
 let contactAd = document.querySelectorAll('.contact p')[0];
-contactAd.innerHTML = siteContent['contact']['address']
+contactAd.textContent = siteContent['contact']['address']
 
 let contactPh = document.querySelectorAll('.contact p')[1];
-contactPh.innerHTML = siteContent['contact']['phone'];
+contactPh.textContent = siteContent['contact']['phone'];
 
 let contactEm = document.querySelectorAll('.contact p')[2];
-contactEm.innerHTML = siteContent['contact']['email'];
+contactEm.textContent = siteContent['contact']['email'];
 
 let Footer = document.querySelector('footer p');
-Footer.innerHTML = siteContent['footer']['copyright'];
+Footer.textContent = siteContent['footer']['copyright'];
 console.log(Footer);
 
 //------------------task 3 below-----------------
 
-let navColor = document.getElementsByTagName('a');
-for(i=0; i< navColor.length; i++){
-  navColor[i].style.color = "green";
-  console.log(navColor[i]);
-}
+let navColor = document.querySelectorAll('a');
+// for(i=0; i< navColor.length; i++){
+//   navColor[i].style.color = "green";
+//   console.log(navColor[i]);
+// }
+navColor.forEach( (item) => { return item.style.color = "green";})
 
 let myNav = document.getElementsByTagName('nav')[0];
 let NavItem1 = document.createElement('a')
